@@ -19,9 +19,12 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', views.index_page, name='index'),
+    path('', views.index_page, name='index'),
     path('login/', views.login_page, name='login'),
     path('signup/', views.signup_page, name='signup'),
-    path('edit/', views.edit_Page, name='editpage')
+    path('edit/', views.edit_Page, name='editpage'),
+    path('insert', views.insertData, name='insertdata'),
+    path('delete/<id>', views.deleteData, name='deletedata'),
+    path('update/<id>', views.updateData, name='updatedata'),
 
 ]
